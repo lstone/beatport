@@ -27,7 +27,7 @@ module Beatport
                 Client.retrieve 'featured/releases', Release, *args
             end
 
-            def self.most_popular(id, options = {})
+            def self.most_popular(options = {})
                 options[:id] = id
                 options[:collection] = true
                 Client.retrieve "most-popular-releases", Release, options
