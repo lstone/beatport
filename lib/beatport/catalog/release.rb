@@ -28,7 +28,6 @@ module Beatport
             end
 
             def self.most_popular(options = {})
-                options[:id] = id
                 options[:collection] = true
                 Client.retrieve "most-popular-releases", Release, options
             end
